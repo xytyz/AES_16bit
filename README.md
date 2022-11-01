@@ -17,23 +17,23 @@ For this project, instead of a full 128-bit AES block, limited by 16 input switc
 
 The entire Project has been divided into 4 subsequent parts, namely:
 1.**Input**
-  -Input is taken on the FPGA using the slide switches which translate to a 4-digit hex message.
-  -The message is stored inside a 16-bit register called the Data Register. 
-  -This register is also used to display the message on a Seven Segment Display
+  - Input is taken on the FPGA using the slide switches which translate to a 4-digit hex message.
+  - The message is stored inside a 16-bit register called the Data Register. 
+  - This register is also used to display the message on a Seven Segment Display
 2.**Encryption/Decryption**
-  -By pressing the mode button, the user can move from the input mode to encryption mode. The message stored in the Data Register undergoes the encryption algorithm.
-  -The output of the algorithm is an encrypted message which is again stored in the Data Register while the cipher key generated is stored in the key register.
-  -The seven-segment display now displays the encrypted message.
+  - By pressing the mode button, the user can move from the input mode to encryption mode. The message stored in the Data Register undergoes the encryption algorithm.
+  - The output of the algorithm is an encrypted message which is again stored in the Data Register while the cipher key generated is stored in the key register.
+  - The seven-segment display now displays the encrypted message.
 3.**Pass Check**
-  -Upon encryption, control is sent to the passcode check block which acts as another step of security. The screen prompts the user to input a password.
-  -A 4-bit password is inputted using the push buttons on the FPGA board.
-  -The password is matched with a predefined pattern stored in the Pass register.
-  -An incorrect password locks the user for 2 seconds.
+  - Upon encryption, control is sent to the passcode check block which acts as another step of security. The screen prompts the user to input a password.
+  - A 4-bit password is inputted using the push buttons on the FPGA board.
+  - The password is matched with a predefined pattern stored in the Pass register.
+  - An incorrect password locks the user for 2 seconds.
 4. **Output**
-   -Incorrect password displays "----" on the SSD.
-  -Only upon correct entry of the password would the decryption cycle start.
-  -The message stored in the Data register is decrypted.
-  -Decrypted Output is then shown on the Seven Segment Display.
+  - Incorrect password displays "----" on the SSD.
+  - Only upon correct entry of the password would the decryption cycle start.
+  - The message stored in the Data register is decrypted.
+  - Decrypted Output is then shown on the Seven Segment Display.
   
 ## References
 
