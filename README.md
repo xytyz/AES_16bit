@@ -15,6 +15,8 @@ For this project, instead of a full 128-bit AES block, limited by 16 input switc
 
 ## Breakdown of the Modules
 
+![Block Diagram of the Project](/Assets/Block_diagram.png "Block Diagram")
+
 The entire Project has been divided into 4 subsequent parts, namely:
 1. **Input**
     - Input is taken on the FPGA using the slide switches which translate to a 4-digit hex message.
@@ -38,8 +40,8 @@ The entire Project has been divided into 4 subsequent parts, namely:
 ## References
 
 To fully understand AES and how we can go about implementing the same on FPGA, we went through multiple research papers and videos online.
-- [Digilent Basys-3 Reference Manual](https://digilent.com/reference/_media/basys3:basys3_rm.pdf)
+- Digilent Basys-3 [Reference Manual](https://digilent.com/reference/_media/basys3:basys3_rm.pdf)
 - Pranesh Prakash & Japreet Grewal, [“ How India Regulates Encryption”](https://eprint.iacr.org/2016/789) 
-- [Máire McLoone and J.V McCanny, "High Performance Single-Chip FPGA Rijndael Algorithm Implementations" Ç.K. Koç, D. Naccache, and C. Paar (Eds.): CHES 2001, LNCS 2162, pp. 65–76, 2001.](https://link.springer.com/content/pdf/10.1007/3-540-44709-1_7.pdf)
-- [Kirat Pal Singh, Shiwani Dod, “An Efficient Hardware Design and Implementation of Advanced Encryption Standard (AES) Algorithm”](https://eprint.iacr.org/2016/789.pdf)
-- [T. Jamil, "The Rijndael algorithm," in IEEE Potentials, vol. 23, no. 2, pp. 36-38, April-May 2004, DOI: 10.1109/MP.2004.1289996.](https://ieeexplore.ieee.org/document/1289996)
+- Máire McLoone and J.V McCanny, "High Performance Single-Chip FPGA Rijndael Algorithm Implementations" [Ç.K. Koç, D. Naccache, and C. Paar (Eds.): CHES 2001, LNCS 2162, pp. 65–76, 2001.](https://link.springer.com/content/pdf/10.1007/3-540-44709-1_7.pdf)
+- Kirat Pal Singh, Shiwani Dod, [“An Efficient Hardware Design and Implementation of Advanced Encryption Standard (AES) Algorithm”](https://eprint.iacr.org/2016/789.pdf)
+- T. Jamil, "The Rijndael algorithm," in IEEE Potentials, [vol. 23, no. 2, pp. 36-38, April-May 2004, DOI: 10.1109/MP.2004.1289996.](https://ieeexplore.ieee.org/document/1289996)
