@@ -3,7 +3,8 @@ Implementation of a detracted form of the Advanced Encryption System (AES) on th
 
 ## Algorithm Used
 
-[Rijndael Algorithm](https://www.techtarget.com/searchsecurity/definition/Rijndael)
+[**Rijndael Algorithm**](https://www.techtarget.com/searchsecurity/definition/Rijndael)
+
 The full AES process is based on this algorithm and it involves a total of 11 rounds with the following transformations: 
 -SubBytes
 -ShiftRows
