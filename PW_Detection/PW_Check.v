@@ -54,12 +54,10 @@ begin
             begin
                 nstate = s1;
                 OUT <= 5'd1;
-                //ledoff <= 0;
             end
             else begin
                 nstate = s0;
                 OUT <= 5'b10001;
-                //ledoff <= 1;
             end
             end
             
@@ -67,12 +65,10 @@ begin
             if(~a_pb && b_pb && ~c_pb && ~d_pb)begin
                 nstate = s2;
                 OUT <= 5'd2;
-                //ledoff <= 0;
             end
             else begin
                 nstate = s0;
                 OUT <= 5'b10001;
-                //ledoff <= 1;
             end
             end
             
@@ -80,12 +76,10 @@ begin
             if(~a_pb && ~b_pb && c_pb && ~d_pb)begin
                 nstate = s3;
                 OUT <= 5'd3;
-                //ledoff <= 0;
             end
             else begin
                 nstate = s0;
                 OUT <= 5'b10001;
-                //ledoff <= 1;
             end
             end
             
@@ -93,7 +87,6 @@ begin
             if(~a_pb && ~b_pb && ~c_pb && d_pb)begin
                 nstate = s0;
                 OUT <= 5'd12;
-                //ledoff <= 0;
             end
             else begin
                 nstate = s0;
