@@ -1,6 +1,6 @@
 module shiftRow(
-	output [15:0]  altered,
-	input [15:0] code
+	output [255:0]  altered,
+	input [255:0] code
     );
 	
 	reg [31 : 0] w0, w1, w2, w3, w4, w5, w6, w7;
