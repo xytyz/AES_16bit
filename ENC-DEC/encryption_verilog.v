@@ -1,14 +1,14 @@
 `timescale 1ns / 1ps
 
 module encryption(
-    input [15:0] codein,
-    input [15:0] key,
-    output[15:0] codeout
+    input [255:0] codein,
+    input [255:0] key,
+	output[255:0] codeout
     );
 	 
-    wire [15:0] r0_out;
-    wire [15:0] r1_out,r2_out,r3_out,r4_out,r5_out,r6_out,r7_out,r8_out,r9_out;
-    wire [15:0] keyout1,keyout2,keyout3,keyout4,keyout5,keyout6,keyout7,keyout8,keyout9,keyout10;
+    wire [255:0] r0_out;
+    wire [255:0] r1_out,r2_out,r3_out,r4_out,r5_out,r6_out,r7_out,r8_out,r9_out;
+    wire [255:0] keyout1,keyout2,keyout3,keyout4,keyout5,keyout6,keyout7,keyout8,keyout9,keyout10;
 	 
 	assign r0_out = codein^key;
 		
@@ -20,15 +20,15 @@ module encryption(
 					.keyin(keyout1),.keyout(keyout2),
 					.altered(r2_out));
 					
-    rounds r3( .clk(clk),.count(4'b0010),.code(r2_out),
+		rounds r3( .clk(clk),.count(4'b0010),.code(r2_out),
 					.keyin(keyout2),.keyout(keyout3),
 					.altered(r3_out));
 					
-    rounds r4(.clk(clk),.count(4'b0011),.code(r3_out),
+		rounds r4(.clk(clk),.count(4'b0011),.code(r3_out),
 					.keyin(keyout3),.keyout(keyout4),
 					.altered(r4_out));
     
-	 	rounds r5(.clk(clk),.count(4'b0100),.code(r4_out),
+		rounds r5(.clk(clk),.count(4'b0100),.code(r4_out),
 					.keyin(keyout4),.keyout(keyout5),
 					.altered(r5_out));
     
