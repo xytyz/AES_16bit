@@ -1,3 +1,6 @@
+/*
+*	Module to mix the columns during the AES encryption process
+*/
 module mixCol(
 	input [255:0] code,
 	output [255:0] altered
@@ -6,12 +9,12 @@ module mixCol(
 genvar i;	
 
 generate 
-	for(i=255;i-31>=0;i-8){
+	for(i=255;i-31>=0;i-8) begin
 		assign altered[i:i-7]= mixer (code[i:i-7],code[i-8:i-15],code[i-16:i-23],code[i-24:i-31]);		
 		assign altered[i-8:i-15]= mixer (code[i-8:i-15],code[i-16:i-23],code[i-24:i-31],code[i:i-7]);
 		assign altered[i-16:i-23]= mixer (code[i-16:i-23],code[i-24:i-31],code[i:i-7],code[i-8:i-15]);
 		assign altered[i-24:i-31]= mixer (code[i-24:i-31],code[i:i-7],code[i-8:i-15],code[i-16:i-23]);
-	}
+	end
 endgenerate
 
 function [7:0] mixer;
