@@ -4,7 +4,7 @@ module shiftRow(
     );
 	
 	reg [31 : 0] w0, w1, w2, w3, w4, w5, w6, w7;
-	reg [31 : 0] ws0, ws1, ws2, ws3;
+	reg [31 : 0] ws0, ws1, ws2, ws3, ws4, ws5, ws6, ws7;
 
 	assign w0 = code[127 : 096];
 	assign w1 = code[095 : 064];
